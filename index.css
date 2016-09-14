@@ -51,15 +51,25 @@ body {
 .grayed {
   color: #999;
 }
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   #land-banner .row {
     margin: 0;
+    text-align: center;
   }
   #land-banner img {
-    width: 80%;
-    margin: 20px 10%;
+    max-width: 80%;
+    margin: 5px 10%;
+    max-height: 203px;
   }
   #land-banner .inner {
     padding: 20px;
+  }
+  #nav .nav li span {
+    display: none;
+  }
+}
+@media (max-width: 440px) {
+  #land-banner img {
+    margin: 20px 10%;
   }
 }

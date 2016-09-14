@@ -45,16 +45,18 @@ html(lang="en")
             i.fa.fa-slack(href="https://hhtpe.slack.com",target="_blank")
 
     nav#nav.navbar.navbar-default
-      .container
+      div
         .navbar-header
         .navbar-collapse
+          ul.nav.navbar-nav.navbar-right.pull-right
+            li: a(href="https://github.com/hackshackerstaipei",target="_blank") #[span github] #[i.fa.fa-github]
+            li: a(href="https://calendar.google.com/calendar/embed?src=4f9ctnr08nmq02hfs7vbu8l9f0%40group.calendar.google.com&ctz=Asia/Taipei",target="_blank") #[span calendar] #[i.fa.fa-calendar]
+            li: a(href="http://hackfoldr.org/hhtpe",target="_blank") #[span hackfoldr] #[i.fa.fa-folder]
           ul.nav.navbar-nav
             li.active: a(href="#") events
             li(data-toggle="tooltip",data-placement="top",title="coming soon!"): a(href="#") projects
-            li: a(href="https://github.com/hackshackerstaipei",target="_blank") github
             li(data-toggle="tooltip",data-placement="top",title="coming soon!"): a(href="#") about
-            li: a(href="https://calendar.google.com/calendar/embed?src=4f9ctnr08nmq02hfs7vbu8l9f0%40group.calendar.google.com&ctz=Asia/Taipei",target="_blank") calendar
-            li: a(href="http://hackfoldr.org/hhtpe",target="_blank") Hackfoldr
+
     #root
       hr
       .media
