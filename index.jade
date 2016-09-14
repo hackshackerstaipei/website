@@ -4,19 +4,19 @@ doctype html
 - var use = { cdn: true, og: false, favicon: true }
 - var lib = { jquery: true, d3js: false, angular: true, bootstrap: true, semantic: false, fontawesome: true, reactjs: false }
 - var assets = "assets"
-- var favicon = "thumbnail.png"
+- var favicon = "img/icon.png"
 - var title = "template"
 - var og = {}
 - og.title = title
-- og.twitter = {type: "summary_large_image", site: "@zbryikt", creator: "@zbryikt"}
-- og.domain = "zbryikt.github.io"
+- og.twitter = {type: "summary_large_image", site: "@hackshackerstaipei", creator: "@hackshackerstaipei"}
+- og.domain = "hackshackers.taipei"
 - og.url = ""
-- og.thumbnail = {width: 200, height: 200, type: "image/png"}
-- og.thumbnail.url = "thumbnail.png"
-- og.author = "zbryikt"
+- og.thumbnail = {width: 1200, height: 630, type: "image/png"}
+- og.thumbnail.url = "hackshackers.taipei/img/thumbnail.png"
+- og.author = "hackshackers taipei"
 - og.section = "Taiwan"
-- og.keyword = "zbryikt,template"
-- og.description = ""
+- og.keyword = "hackshackers"
+- og.description = "hackshackers Taipei chapter / rebooting journalism"
 html(lang="en")
   head(prefix="og: http://ogp.me/ns#")
     meta(charset="utf-8")
@@ -28,4 +28,47 @@ html(lang="en")
     link(rel="stylesheet",type="text/css",href="index.css")
     script(type="text/javascript",src="index.js")
   body
-    h2 Hacks Hackers Taipei
+    #land-banner
+      .row
+        .col-sm-7
+          img(src="img/banner.png")
+        .col-sm-5: .inner
+          label subscribe to our latest event:
+          .input-group
+            input.form-control(placeholder="Your Email Address",disabled)
+            span.input-group-btn: .btn.btn-default(data-toggle="tooltip",data-placement="top",title="coming soon!") Subscribe
+          br
+          .pull-right
+            label ... or follow us on
+            i.fa.fa-facebook-square(href="https://www.facebook.com/groups/868771643258752/",target="_blank")
+            i.fa.fa-twitter-square(href="https://twitter.com/hackshackerstpe",target="_blank")
+            i.fa.fa-slack(href="https://hhtpe.slack.com",target="_blank")
+
+    nav#nav.navbar.navbar-default
+      .container
+        .navbar-header
+        .navbar-collapse
+          ul.nav.navbar-nav
+            li.active: a(href="#") events
+            li(data-toggle="tooltip",data-placement="top",title="coming soon!"): a(href="#") projects
+            li: a(href="https://github.com/hackshackerstaipei",target="_blank") github
+            li(data-toggle="tooltip",data-placement="top",title="coming soon!"): a(href="#") about
+            li: a(href="https://calendar.google.com/calendar/embed?src=4f9ctnr08nmq02hfs7vbu8l9f0%40group.calendar.google.com&ctz=Asia/Taipei",target="_blank") calendar
+    #root
+      hr
+      .media
+        .pull-left
+          a(href="#")
+            img.media-object(src="img/qgis.jpg",style="width:160px")
+        .media-body
+          h4.media-heading QGIS 60min Crash Course #[small.grayed / Mimi Chen / 2016-10-16]
+          p QGIS is a user friendly Open Source Geographic Information System (GIS) licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, Windows and Android and supports numerous vector, raster, and database formats and functionalities.
+      hr
+    br
+    br
+    br
+    br
+    #footer
+      .pull-right
+        img(src="img/banner-sm.png")
+      img(src="img/icon.png",style="width:36px")
