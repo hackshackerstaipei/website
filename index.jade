@@ -26,19 +26,26 @@ html(lang="en")
     include library.jade
     // custom files
     link(rel="stylesheet",type="text/css",href="index.css")
+    script(src="//cdn.firebase.com/js/client/2.4.2/firebase.js")
     script(type="text/javascript",src="index.js")
+
   body
     #land-banner
       .row
         .col-sm-7
-          img(src="img/banner.png")
+          img.banner(src="img/banner.png")
         .col-sm-5: .inner
           label subscribe to our latest event:
-          .input-group
-            input.form-control(placeholder="Your Email Address",disabled)
-            span.input-group-btn: .btn.btn-default(data-toggle="tooltip",data-placement="top",title="coming soon!") Subscribe
+          #subscribe.input-group(style="position:relative")
+            input.form-control(placeholder="Your Email Address")
+            .state
+              img.loader(src="img/loader.gif")
+              i.fa.fa-check.text-success
+              i.fa.fa-close.text-danger
+            span.input-group-btn
+              .btn.btn-default(data-toggle="tooltip",data-placement="top") Subscribe
           br
-          .pull-right
+          .pull-right.follow
             label ... or follow us on
             a(href="https://www.facebook.com/groups/868771643258752/",target="_blank"): i.fa.fa-facebook-square
             a(href="https://twitter.com/hackshackerstpe",target="_blank"): i.fa.fa-twitter-square

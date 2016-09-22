@@ -18,13 +18,33 @@ html,body
     margin: auto
   .inner
     padding: 150px 0 0
-  img
+  .banner
     width: 400px
     margin: 50px
-  i.fa
+  .state
+    position: absolute
+    display: inline
+    top: 5px
+    z-index: 10
+    margin: 0 0 0 -32px
+    .loader, i.fa
+      position: absolute
+      opacity: 0
+    i
+      display: inline-block
+      font-size: 24px
+  .loader
+    width: 24px
+
+  .follow i.fa
     font-size: 1.5em
     vertical-align: top
     margin-left: 10px
+#subscribe.has-error
+  input
+    border-color: #f00
+  i.fa.fa-close
+    opacity: 1
 
 #root
   max-width: 1024px

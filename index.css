@@ -19,14 +19,39 @@ body {
 #land-banner .inner {
   padding: 150px 0 0;
 }
-#land-banner img {
+#land-banner .banner {
   width: 400px;
   margin: 50px;
 }
-#land-banner i.fa {
+#land-banner .state {
+  position: absolute;
+  display: inline;
+  top: 5px;
+  z-index: 10;
+  margin: 0 0 0 -32px;
+}
+#land-banner .state .loader,
+#land-banner .state i.fa {
+  position: absolute;
+  opacity: 0;
+}
+#land-banner .state i {
+  display: inline-block;
+  font-size: 24px;
+}
+#land-banner .loader {
+  width: 24px;
+}
+#land-banner .follow i.fa {
   font-size: 1.5em;
   vertical-align: top;
   margin-left: 10px;
+}
+#subscribe.has-error input {
+  border-color: #f00;
+}
+#subscribe.has-error i.fa.fa-close {
+  opacity: 1;
 }
 #root {
   max-width: 1024px;
