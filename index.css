@@ -1,3 +1,4 @@
+@import url("http://fonts.googleapis.com/earlyaccess/notosanstc.css");
 html,
 body {
   color: #444;
@@ -5,6 +6,15 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+html.font-loaded body,
+html.font-loaded h1,
+html.font-loaded h2,
+html.font-loaded h3,
+html.font-loaded h4,
+html.font-loaded h5,
+html.font-loaded h6 {
+  font-family: 'Noto Sans TC', sans-serif;
 }
 #land-banner {
   width: 100%;
@@ -110,7 +120,7 @@ body {
     margin: 20px 10%;
   }
 }
-p {
+.about p {
   margin: 20px;
 }
 i.hh {
