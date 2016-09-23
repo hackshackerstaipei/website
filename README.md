@@ -1,32 +1,23 @@
-template
-========
+Hacks/Hackers Taipei Landing Website
+==========
 
-a web template, for simple frontend. it contains a simple webserver, watch daemon, and a makefile for offline building. It uses jade, styl and livescript to build a web page.
-
-
-Usage
-========
-
-Simply edit index.jade, index.styl and index.ls, and type 'make' to build these into index.html, index.css and index.js.
-
-You can also watch all your changes and build them automatically. To do so, run
-
-    npm i
-
-once (for installing all dependencies), then run
-
-    npm start
-
-It will start watching all styl, jade and livescript changes, and also run a simple web server listening on localhost:9999.
+This is the source code for http://hackshackers.taipei.
 
 
-Configuration
-========
+Development
+----------
 
-Options about CDN, Open Graph, Favicon, thumbnail and used libraries are available in index.jade:
+this site is developed with LiveScript, Stylus and Jade. to modify, run following:
 
-    - var use = { cdn: false, og: false, favicon: true }
-    - var lib = { jquery: true, d3js: false, angular: true, bootstrap: true, semantic: false }
-    - var assets = "assets"
-    - var thumbnail = "thumbnail.png"
-    - var favicon = "thumbnail.png"
+```
+    npm install
+    ./node_modules/.bin/lsc server
+```
+
+which will build source codes and run a web server in http://localhost:9999/
+
+
+LICENSE
+==========
+
+MIT License.
