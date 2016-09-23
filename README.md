@@ -1,3 +1,7 @@
+
+![Hacks/Hackers Taipei](https://github.com/hackshackerstaipei/website/blob/master/img/banner-md.png?raw=true)
+
+
 Hacks/Hackers Taipei Landing Website
 ==========
 
