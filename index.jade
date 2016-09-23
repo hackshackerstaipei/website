@@ -40,10 +40,11 @@ html(lang="en")
             input.form-control(placeholder="Your Email Address")
             .state
               img.loader(src="img/loader.gif")
-              i.fa.fa-check.text-success
               i.fa.fa-close.text-danger
             span.input-group-btn
-              .btn.btn-default(data-toggle="tooltip",data-placement="top") Subscribe
+              .btn.btn-default(data-toggle="tooltip",data-placement="top")
+                span Subscribe#[span.ok d] &nbsp;
+                i.ok.fa.fa-check.text-success
           br
           .pull-right.follow
             label ... or follow us on

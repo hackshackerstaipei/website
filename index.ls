@@ -3,6 +3,7 @@ $('[data-toggle="tooltip"]').tooltip!
 
 fbref = new Firebase \https://hackshackers-taipei.firebaseio.com/subscriptions
 $('#subscribe .btn').on \click, ->
+  if $('#subscribe').hasClass \ok => return
   email = $('#subscribe input').val!
   $('#subscribe i.fa.check').css \opacity, 0
   $('#subscribe .loader').css \opacity, 0
@@ -12,9 +13,9 @@ $('#subscribe .btn').on \click, ->
     return
   $('#subscribe').removeClass \has-error
   $('#subscribe .loader').css \opacity, 1
-  $('#subscribe i.fa-check').css \opacity, 0
   fbref.push { email: $('#subscribe input').val!}, (e)->
     if e => alert 'failed to subscribe, please try later'
     else
       $('#subscribe .loader').css \opacity 0
-      $('#subscribe i.fa-check').css \opacity 1
+      $('#subscribe').addClass \ok
+      $('#subscribe .btn').addClass \disabled
