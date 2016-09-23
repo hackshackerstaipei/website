@@ -1,0 +1,30 @@
+doctype html
+//- basic libraries: jquery(1.10.2), d3js(3.5.4), angularjs(1.3.15), bootstrap(3.0)/semantic-ui(0.9.3/0.9.5)
+//-                  fontawesome(4.4.0), reactjs(0.14.0)
+- var use = { cdn: true, og: true, favicon: true }
+- var lib = { jquery: true, d3js: false, angular: true, bootstrap: true, semantic: false, fontawesome: true, reactjs: false }
+- var assets = "assets"
+- var favicon = "img/icon.png"
+- var title = "Hacks/Hackers Taipei"
+- var og = {}
+- og.title = title
+- og.twitter = {type: "summary_large_image", site: "@hackshackerstaipei", creator: "@hackshackerstaipei"}
+- og.domain = "hackshackers.taipei"
+- og.url = ""
+- og.thumbnail = {width: 1200, height: 630, type: "image/png"}
+- og.thumbnail.url = "http://hackshackers.taipei/img/thumbnail.png"
+- og.author = "hackshackers taipei"
+- og.section = "Taiwan"
+- og.keyword = "hackshackers"
+- og.description = "Hacks/Hackers Taipei Chapter / rebooting journalism"
+html(lang="en")
+  head(prefix="og: http://ogp.me/ns#")
+    meta(charset="utf-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    // libraries
+    include library.jade
+    // custom files
+    link(rel="stylesheet",type="text/css",href="index.css")
+    script(src="//cdn.firebase.com/js/client/2.4.2/firebase.js")
+

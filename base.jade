@@ -1,0 +1,25 @@
+doctype html
+include config.jade
+block vars
+html(lang="en")
+  head(prefix="og: http://ogp.me/ns#")
+    meta(charset="utf-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    // libraries
+    include library.jade
+    // custom files
+    link(rel="stylesheet",type="text/css",href="index.css")
+    script(src="//cdn.firebase.com/js/client/2.4.2/firebase.js")
+    block head
+  body
+    block body
+    #footer
+      .pull-right
+        img(src="img/banner-sm.png")
+      img.pull-left(src="img/icon.png",style="width:36px")
+      ul.nav.nav-pills.pull-left
+        li: a(href="https://www.facebook.com/groups/868771643258752/",target="_blank"): i.fa.fa-facebook
+        li: a(href="https://twitter.com/hackshackerstpe",target="_blank"): i.fa.fa-twitter
+        li: a(href="https://github.com/hackshackerstaipei",target="_blank"): i.fa.fa-github
+        li: a(href="https://hhtpe.slack.com/",target="_blank"): i.fa.fa-slack
