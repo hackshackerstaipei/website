@@ -1,1 +1,1 @@
-var font;font=new FontFaceObserver("Noto Sans TC"),font.load("臺灣").then(function(){return setTimeout(function(){return $("html").addClass("font-loaded")},1e3)});
+var font;font=new FontFaceObserver("Noto Sans TC"),font.load("臺灣").then(function(){return $("html").addClass("font-loaded")});
