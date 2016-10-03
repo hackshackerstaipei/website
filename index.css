@@ -130,3 +130,11 @@ i.hh {
   vertical-align: middle;
   background: url("img/hh.svg") center center no-repeat;
 }
+.avatar {
+  display: block;
+  border-radius: 50%;
+  margin: auto;
+}
+.speaker {
+  text-align: center;
+}
