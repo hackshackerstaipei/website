@@ -20,6 +20,9 @@ html,body
   padding: 0
   font-size: 18px
 
+img
+  max-width: 90%
+  margin: auto
 html.font-loaded
   body
     font-family: hhtpe-zh, Hind, Montserrat, Arial, sans-serif
@@ -189,6 +192,11 @@ i.hh
     margin-bottom: 15px
     text-decoration: underline
     margin-left: -5px
+  .cta
+    margin: 50px
+    padding: 20px 40px
+    width: 100%
+    max-width: 480px
 
 .red
   color: #d41
@@ -216,3 +224,31 @@ table.agenda
       padding: 20px
   th
     background: #f9f9f9
+
+
+@media (max-width: 768px)
+  .event .cta
+    margin: 10px auto
+    max-width: 90%
+  .speaker
+    margin-bottom: 60px
+  table.agenda
+    display: block
+    tr, td
+      display: block
+    th
+      display: none
+    td:first-child
+      text-align: center
+      border: 0
+      background: #f9f9f9
+    td:nth-child(2)
+      text-align: left
+      padding: 15px 15px 0
+      font-size: 0.9em
+    td.content
+      font-size: 0.9em
+      background: #fff
+      padding: 0 0 0 10px
+      blockquote
+        background: none

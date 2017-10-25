@@ -17,6 +17,10 @@ body {
   padding: 0;
   font-size: 18px;
 }
+img {
+  max-width: 90%;
+  margin: auto;
+}
 html.font-loaded body {
   font-family: hhtpe-zh, Hind, Montserrat, Arial, sans-serif;
 }
@@ -221,6 +225,12 @@ i.hh {
   text-decoration: underline;
   margin-left: -5px;
 }
+.event .cta {
+  margin: 50px;
+  padding: 20px 40px;
+  width: 100%;
+  max-width: 480px;
+}
 .red {
   color: #d41;
 }
@@ -252,4 +262,41 @@ table.agenda td.content blockquote {
 }
 table.agenda th {
   background: #f9f9f9;
+}
+@media (max-width: 768px) {
+  .event .cta {
+    margin: 10px auto;
+    max-width: 90%;
+  }
+  .speaker {
+    margin-bottom: 60px;
+  }
+  table.agenda {
+    display: block;
+  }
+  table.agenda tr,
+  table.agenda td {
+    display: block;
+  }
+  table.agenda th {
+    display: none;
+  }
+  table.agenda td:first-child {
+    text-align: center;
+    border: 0;
+    background: #f9f9f9;
+  }
+  table.agenda td:nth-child(2) {
+    text-align: left;
+    padding: 15px 15px 0;
+    font-size: 0.9em;
+  }
+  table.agenda td.content {
+    font-size: 0.9em;
+    background: #fff;
+    padding: 0 0 0 10px;
+  }
+  table.agenda td.content blockquote {
+    background: none;
+  }
 }
