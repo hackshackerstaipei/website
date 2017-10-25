@@ -2,6 +2,7 @@ extends /base.jade
 block head
   script(type="text/javascript",src="index.js")
 block body
+  include mixin.jade
   #land-banner
     .row
       .col-sm-7
@@ -40,6 +41,155 @@ block body
 
   #root
     h2 最新活動
+
+    .event
+      //-img(src="img/event/170910/news.jpg",style="margin:20px auto 0")
+      h3  第七場小聚：迷你週年慶 / #[small.grayed 2017/11/04]
+
+      p Hacks/Hackers Taipei 滿一歲了！
+      p 在 11/04 (週六）下午，我們將有一個小的週年分享會，請到常來參與的社群朋友，以5 ~ 15分鐘的迷你閃點分享時間，接力分享他 / 她或團隊這一年來的學習跟心得。
+      .text-center: a.btn.btn-lg.btn-info(
+      style="margin:50px;padding:20px 40px;width:100%;max-width:480px",
+      href="https://www.accupass.com/event/1710240452471889294777",target="_blank")
+        div(style="font-size:1.7em") 現在就報名
+        small Register Now
+      hr
+      h4 活動時間
+      div 2017年11月4日(六) 13:50 ~ 17:00
+      br
+      h4 活動地點
+      div  女人迷樂園 ( #[a(href="https://goo.gl/maps/khuTm8TuJw32",target="_blank") 台北市和平東路二段 50 號] / 感謝 #[a(href="https://womany.net/",target="_blank") womany.net] 提供場地 )
+      br
+      h4 活動流程
+      table.agenda(style="width:100%")
+        tr
+          th(style="width:140px") 時段
+          th 議程 
+
+        tr #[td 13:50 ~ 14:20] #[td 報到]
+        tr #[td 14:20 ~ 14:30] #[td 開場]
+
+        tr
+          td 14:30 ~ 14:40
+          td 閃電分享一：#[b.red 「2017數位新聞工作者線上調查」分享 / Hacks/Hackers Taipei]
+        tr
+          td.content(colspan="2"): blockquote Hacks/hackers Taipei在今年下半年針對從事資料新聞、數位新聞專輯的台灣新聞工作者進行線上調查。這些工作者的生存現狀跟挑戰是什麼？
+
+        tr
+          td 14:40 ~ 14:50
+          td 閃電分享二：#[b.red 「傳統紙媒中獨立團隊的一年」/ 《鏡傳媒》簡信昌]
+        tr
+          td.content(colspan="2"): blockquote 去年成立的鏡傳媒，其實主體是週刊紙媒。可是在這樣一般人認知的傳統紙媒中，經營者卻讓我們有獨立完成數位專題的空間。這一年來，我們團隊都還在磨合，甚至是踩著別人的腳印設法找出自己的節奏。所以我們有什麼發現，以及未來的方向是什麼呢？
+
+        tr
+          td 14:50 ~ 15:00
+          td 閃電分享三：#[b.red 「聯合報數位專題2017實作心得」/ 《聯合報新媒體中心》蔡幸怡]
+        tr
+          td.content(colspan="2"): blockquote 聯合報新媒體2017年在數位創新說故事的實作心得分享。從流程談起，兩個問題想跟大家交流：1. 新聞性與新技術開拓，魚跟熊掌如何兼得？ 2. 軍備競賽式的創新說故事，為何而戰？
+
+        tr
+          td 15:00 ~ 15:10
+          td 閃電分享四：#[b.red 「小步如何快跑？天下全閱讀的敏捷實驗」 / 《天下雜誌》沈琬婷]
+        tr
+          td.content(colspan="2"): blockquote 天下雜誌在今年三月推出訂閱制「全閱讀」後，在內容、營運、行銷與工程上，如何以數據作為驅動，進行敏捷實驗，小步快跑？
+
+        tr
+          td 15:10 ~ 15:40
+          td 中場休息與交流
+        tr
+          td 15:40 ~ 15:50
+          td 閃電分享五：#[b.red 「沃草這半年來數位作品的心得」 / 《沃草》洪國鈞]
+        tr
+          td.content(colspan="2"): blockquote 沃草如何說故事：利用線上免費工具（及其極限）
+        tr
+          td 15:50 ~ 16:00
+          td 閃電分享六：#[b.red 「圖像思考：端傳媒的數位專題心得」 / 《端傳媒》曾立宇]
+        tr
+          td.content(colspan="2"): blockquote 端傳媒在過去一年做過不少數位專題。以設計師的角度，在每一次和時間賽跑的實作/實驗中，如何藉由圖像與文字的思考轉化，降低不同崗位同事的溝通成本，讓專題呈現效果最佳化。
+        tr
+          td 16:00 ~ 16:10
+          td 閃電分享七：#[b.red 「如何提升資料新聞的工作效率」 / 《天下雜誌》 林佳賢]
+        tr
+          td.content(colspan="2"): blockquote 每週出一篇新聞的頻率，如果沒有發展出一套產製流程，可是會永遠被死線追著跑的。我參考了其他記者同事的工作流程，嘗試出一套資料記者可以套用的「採寫」流程。
+        tr
+          td 16:10 ~ 16:20
+          td 閃電分享八：#[b.red 「媒體中的變形怪－新聞室專案管理（PM）經驗分享」 / 《報導者》陳貞樺]
+        tr
+          td.content(colspan="2"): blockquote 分享新聞室專案管理角色的工作內容，以及近兩年來在《報導者》製作數位專題的流程的變化、與各部門合作會出現的問題等。
+
+        tr
+          td 16:20 ~ 16:30
+          td 開放分享名額 / 1 ( #[small: a(href="https://goo.gl/forms/jgJl9JD9SodxZlaJ2",target="_blank") 點我報名] #[b.red *] )
+
+        tr
+          td 16:30 ~ 16:40
+          td 開放分享名額 / 2 ( #[small: a(href="https://goo.gl/forms/jgJl9JD9SodxZlaJ2",target="_blank") 點我報名] #[b.red *] )
+      +nbr(2)
+      p 當天活動依舊鼓勵大家共同筆記，#[a(href="https://docs.google.com/document/d/189MdR2Nybj_0jN53EP3Z3RNk4qX4f2Wxp_zqYAbNOy4/edit?usp=sharing",target="_blank") 共筆連結在此]，歡迎一起參與記錄。
+      +nbr(1)
+      .well
+        p: small #[i.fa.fa-asterisk.red] 我們預計保留兩個分享時段提供給網路報名，如果您有興趣分享您或團隊這一年來的學習心得，歡迎透過 #[a(href="https://goo.gl/forms/jgJl9JD9SodxZlaJ2",target="_blank") 這個連結] 報名；若超過兩組報名，主辦單位會再依主題、順序等條件來決定分享單位，並於 11/02 前公布。
+      +nbr(2)
+      h4.text-center 講者陣容
+      hr
+      .row
+        .col-sm-4.speaker
+          img.avatar(src="/img/event/171104/hcchien.jpg")
+          .name 簡信昌
+          .title 鏡傳媒 CTO
+          p.brief 去年成立的鏡傳媒，其實主體是週刊紙媒。可是在這樣一般人認知的傳統紙媒中，經營者卻讓我們有獨立完成數位專題的空間。這一年來，我們團隊都還在磨合，甚至是踩著別人的腳印設法找出自己的節奏。所以我們有什麼發現，以及未來的方向是什麼呢？
+
+        .col-sm-4.speaker
+          img.avatar(src="/img/event/171104/violatsai.jpg")
+          .name 蔡幸怡
+          .title 聯合報新媒體中心組長
+          p.brief 聯合報新媒體2017年在數位創新說故事的實作心得分享。從流程談起，二個問題想跟大家交流：1. 新聞性與新技術開拓，魚跟熊掌如何兼得？ 2. 軍備競賽式的創新說故事，為何而戰？
+
+        .col-sm-4.speaker
+          img.avatar(src="/img/event/171104/wanting.jpg")
+          .name 沈琬婷
+          .title 天下雜誌數位內容營運副理
+          p.brief 天下雜誌在今年三月推出訂閱制「全閱讀」後，在內容、營運、行銷與工程上，如何以數據作為驅動，進行敏捷實驗，小步快跑？
+
+      +nbr(1)
+      .row
+        .col-sm-4.speaker
+          img.avatar(src="/img/event/171104/kuochun.jpg")
+          .name 洪國鈞
+          .title 沃草專案經理
+          p.brief 沃草如何說故事：利用線上免費工具（及其極限）
+
+        .col-sm-4.speaker
+          img.avatar(src="/img/event/171104/liyu.jpg")
+          .name 曾立宇
+          .title 端傳媒設計師
+          p.brief 端傳媒在過去一年做過不少數位專題。以設計師的角度，在每一次和時間賽跑的實作/實驗中，如何藉由圖像與文字的思考轉化，降低不同崗位同事的溝通成本，讓專題呈現效果最佳化。
+
+        .col-sm-4.speaker
+          img.avatar(src="/img/event/171104/dataman.jpg")
+          .name 林佳賢
+          .title 天下雜誌資料新聞記者
+          p.brief 每週出一篇新聞的頻率，如果沒有發展出一套產製流程，可是會永遠被死線追著跑的。我參考了記者同事的工作流程，嘗試出一套資料記者可以套用的「採寫」流程。
+      +nbr(1)
+      .row
+        .col-sm-4.speaker
+          img.avatar(src="/img/event/171104/mimichen.jpg")
+          .name 陳貞樺
+          .title 報導者新聞室專案經理
+          p.brief 分享新聞室專案管理角色的工作內容，以及近兩年來在《報導者》製作數位專題的流程的變化、與各部門合作會出現的問題等。
+
+      +nbr(2)
+      h4.text-center 怎麼去？
+      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.6039318283065!2d121.5754033150065!3d25.047511883965953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab9ed0bf20f9%3A0x545681a19f244c60!2zMTEw5Y-w54Gj5Y-w5YyX5biC5L-h576p5Y2A5p2-5bGx6LevMTMy6Jmf!5e0!3m2!1szh-TW!2shk!4v1504661517866",width="100%",height="300px",frameborder="0",style="border:0",allowfullscreen)
+
+      .text-center
+        a.btn.btn-lg.btn-info(
+        style="margin:50px;padding:20px 40px;width:100%;max-width:480px",
+        href="https://www.accupass.com/event/1710240452471889294777",target="_blank")
+          div(style="font-size:1.7em") 現在就報名
+          small Register Now
+
+    h2 過往活動
 
     .event
       img(src="img/event/170910/news.jpg",style="margin:20px auto 0")
@@ -298,7 +448,6 @@ block body
         iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7928281275013!2d121.57015331501923!3d25.041103844160514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aba34357531f%3A0xbb46a816cc1fe01c!2zMTEw5Y-w5YyX5biC5L-h576p5Y2A5b-g5a2d5p2x6Lev5LqU5q61Mjkz6Jmf!5e0!3m2!1szh-TW!2stw!4v1480598226193",frameborder="0",style="border:0;width:100%;height:300px",allowfullscreen)
 
 
-    h2 過往活動
     .event
       h3 地圖神器 QGIS 實戰 / #[small.grayed 2016/10/16]
       p Hacks/Hackers Taipei的第一次小聚，將討論地圖神器QGIS的教學和分享。QGIS為國外新聞室常用的報導工具，我們將邀請報導者記者陳貞樺，以及先後在紐約時報、華盛頓郵報實習的林辰峰，分享第一手的實作案例和應用。
