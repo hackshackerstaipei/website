@@ -1,5 +1,8 @@
 @import url("http://fonts.googleapis.com/earlyaccess/notosanstc.css");
 @import url("https://fonts.googleapis.com/css?family=Hind|Montserrat");
+ {
+  width: 100%;
+}
 .spc1 {
   height: 0;
 }
