@@ -2,13 +2,15 @@ extends /base.pug
 block vars
 block head
 block body
-  .w-100.h-100.text-white(style="background:url(/assets/img/hero-bg.jpg) center center fixed #222;background-size:cover")
+  .w-100.h-100.text-white.position-relative(style="background:url(/assets/img/hero-bg.jpg) center center fixed #222;background-size:cover")
     .vertical-center: .w-100.text-center
       img.mb-4(src="/assets/img/icon.svg",style="width:3em;opacity:.1;margin-top:-3em")
       h1.display-4.font-weight-bold Hacks/Hackers Taipei
       p 由一群關心新聞 x 科技發展的朋友在台北成立 Hacks/Hackers 在亞洲的第四站。
+    .position-absolute.w-100(style="bottom:3em",data-scrollto="#intro")
+      img.d-block.mx-auto(src="/assets/img/down.svg",style="width:4em")
   .typeset.heading-contrast.mb-0
-    .w-1024.rwd.mx-auto
+    #intro.w-1024.rwd.mx-auto
       .py-4
         h2 什麼是 Hacks/Hackers？
         p Hacks/Hackers（簡稱H/H） 是由美國西北大學新聞學院教授Rich Gordon、Storify創辦人Burt Herman、前紐約時報互動新聞主編Aron Pilhofer從2009年開始逐漸發展出的非營利新聞社群，鼓勵記者編輯（Hacks）和程式設計師（Hackers）相互學習、合作，一起想像新聞的未來。
@@ -58,3 +60,5 @@ block body
           li 第 12 場小聚： 亞洲調查記者年會會後分享
 
 block script
+  script: :lsc
+    smoothScroll!
