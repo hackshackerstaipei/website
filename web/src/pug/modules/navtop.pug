@@ -1,0 +1,16 @@
+//- module
+- if(!ctrl.navtop) { ctrl.navtop = {placeholder: true, shown: true}; }
+- if(!ctrl.navtop.className) { ctrl.navtop.className = "navbar-light bg-light" };
+#nav-top
+  nav.navbar.navbar-expand-lg.bg-dark.navbar-dark.text-light(
+  class=ctrl.navtop.className,
+  data-transition=ctrl.navtop.transition,
+  data-transition-target=ctrl.navtop.transitionTarget)
+    button.navbar-toggler(type="button",data-toggle="collapse",data-target="#nav-top-content")
+      span.navbar-toggler-icon
+    #nav-top-content.collapse.navbar-collapse
+      ul.navbar-nav.mx-auto
+        li.nav-item: a.nav-link(href="/") #[img(src="/assets/img/logo-short.svg",style="vertical-align:0;height:.83em")]
+        li.nav-item: a.nav-link(href="/about/") 關於我們
+        li.nav-item: a.nav-link(href="#") 近期活動
+        li.nav-item: a.nav-link(href="#") 過往活動

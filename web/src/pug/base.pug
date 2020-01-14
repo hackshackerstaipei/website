@@ -1,0 +1,17 @@
+//- module
+doctype html
+html
+  include /../../static/assets/lib/ldui/pug/ldui.pug
+  block vars
+  head
+    +css("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css")
+    +css("/assets/lib/ldui/ldui.min.css")
+    +css("/css/index.css")
+    block head
+  body
+    include /modules/navtop.pug
+    block body
+    +script("/assets/lib/ldui/ldui.min.js")
+    include /modules/justfont.pug
+    block script
+    include /modules/foot.pug

@@ -1,0 +1,25 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: xingothic-tc;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: jf-jinxuan;
+}
+.typeset h1,
+.typeset h2,
+.typeset h3,
+.typeset h4,
+.typeset h5,
+.typeset h6 {
+  font-family: jf-jinxuan;
+}
