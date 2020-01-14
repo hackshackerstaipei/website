@@ -1,28 +1,26 @@
 {
-  "author": "Kirby Wu",
-  "name": "template",
-  "description": "simple, quick template for bootstrap a page",
+  "author": "zbryikt",
+  "name": "hackshackers.taipei",
+  "license": "MIT",
+  "description": "Hacks/Hackers Taipei Official Website",
   "version": "0.0.1",
-  "homepage": "https://github.com/zbryikt/template",
+  "homepage": "https://github.com/hackshackerstaipei/website",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zbryikt/template"
+    "url": "https://github.com/hackshackerstaipei/website"
   },
   "engines": {
     "node": ">=0.12.6",
     "npm": ">=1.2.2"
   },
   "scripts": {
-    "start": "node_modules/.bin/lsc server.ls",
-    "restart": "node_modules\\.bin\\lsc server.ls",
-    "prepare": "npm install chokidar@0.8.0"
+    "start": "cd web; ../node_modules/.bin/lsc ../node_modules/template/server.ls"
   },
-  "dependencies": {
+  "devDependencies": {
     "LiveScript": ">=1.2.0",
-    "jade": "=1.11.0",
-    "chokidar": "=1.0.3",
-    "stylus": "=0.50.0",
-    "uglify-js": "=2.4.16",
-    "markdown": "=0.5.0"
+    "stylus": "^0.54.5",
+    "uglify-js": "=3.2.0",
+    "uglifycss": "0.0.29",
+    "template": "github:zbryikt/template#v2"
   }
 }
