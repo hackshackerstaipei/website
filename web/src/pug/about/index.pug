@@ -2,7 +2,8 @@ extends /base.pug
 block vars
 block head
 block body
-  .w-100.h-gr.bg-dark.text-white: .vertical-center: .w-100.text-center
+  .w-100.h-gr.text-white(style="background:url(/assets/img/about-bg.jpg) center center fixed no-repeat;background-size:cover"): .vertical-center: .w-100.text-center
+    img.mb-4(src="/assets/img/icon.svg",style="width:3em;opacity:.1;margin-top:-1em")
     h1 Hacks/Hackers Taipei
     p 關於我們
   .typeset.heading-contrast: .p-4.w-768.mx-auto.rwd
