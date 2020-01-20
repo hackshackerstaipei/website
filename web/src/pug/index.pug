@@ -43,23 +43,24 @@ block body
             .d-flex.my-4
               each i in [1,2,3]
                 .mr-2(style="width:2.5em"): .aspect-ratio.ratio-1by1.rounded-circle.bg-secondary
-            .my-4: .btn.btn-outline-light 了解更多 &#xbb;
+            .my-4: a.btn.btn-outline-light(href="/events/latest/") 了解更多 &#xbb;
 
     #post.bg-light.text-dark.w-100.h-100.mb-4: .vertical-center: .w-100: .w-1024.rwd.mx-auto.pt-4.my-4
       .pb-4.text-right
         .text-muted Latest Articles
         h1.my-0 最新文章
       .d-flex.my-4.pb-4
-        div(style="flex:1 0 33%;padding-right:15px"): .vertical-center: .w-100
+        div(style="flex:1 0 50%;padding-right:15px"): .vertical-center: .w-100
           h2.mt-0.mb-2 GEN峰會見聞錄之一：關於資料新聞的未來
           p.text-dark.mb-2 我們常在台灣討論資料新聞的內容、團隊編制、流程等面向，但這次峰會提供更宏觀的視野和想像：生態系統的建立。
+          .text-right: a(href="#") ... 閱讀全文 &#xbb;
           .py-1.d-flex.align-items-center
             .mr-2(style="width:2.5em"): .aspect-ratio.ratio-1by1.rounded-circle.bg-secondary
             .text-dark.text-sm
               div Haohsiang Ko
               div Jul 5, 2019
-        div(style="flex:2 0 67%;padding-left:15px;")
-          .aspect-ratio.ratio-2by1.bg-secondary
+        div(style="flex:2 0 50%;padding-left:15px;")
+          .aspect-ratio.ratio-3by2.bg-secondary
 
     .w-1024.rwd.mx-auto.py-4.text-center.mb-4: .py-4
       h2.mb-2 線上參與
