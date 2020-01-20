@@ -1,8 +1,8 @@
 extends /base.pug
 block body
   link(href="https://fonts.googleapis.com/css?family=Karma:300,600&display=swap" rel="stylesheet")
-  .typeset.heading-contrast.post.mb-0
-    .w-768.mx-auto.rwd
+  .typeset.heading-contrast.mb-0
+    .w-768.mx-auto.rwd.post
       :md
         # Jealous List 2019
 
@@ -49,10 +49,12 @@ block body
         *最新[Hacks/Hackers Taipei＠medium](https://medium.com/hackshackerstaipei/)，則專門匯集台灣與全球在「科技x新聞」的現場觀察和思考。如果你有興趣投稿，歡迎來信：hackshackerstaipei@gmail.com*
     .w-100.bg-light.py-4.mt-4: .py-4
       .w-1024.mx-auto.rwd
-        h4.my-4 更多文章
+        .d-flex.my-4
+          h4.m-0.flex-grow-1 更多文章
+          h4.m-0: a(href="/post/") 文章列表 &#xbb;
         .row
           each i in [1,2,3]
-            .col-md-4.mb-4.pb-4
+            .col-md-4.mb-4.pb-4: a.text-dark.text-no-deco(href="/post/jealous-list-2019/")
               .aspect-ratio.ratio-16by9.bg-dark.mb-2
               h3.mt-0.mb-2 GEN峰會見聞錄之一：關於資料新聞的未來
               //-p.text-muted.mb-2 我們常在台灣討論資料新聞的內容、團隊編制、流程等面向，但這次峰會提供更宏觀的視野和想像：生態系統的建立。
