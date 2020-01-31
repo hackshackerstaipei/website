@@ -87,3 +87,6 @@ h6 {
 .foot a {
   color: #fff;
 }
+.typeset p {
+  color: currentColor;
+}

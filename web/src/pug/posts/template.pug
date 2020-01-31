@@ -1,0 +1,31 @@
+//- module
+extends /base.pug
+block body
+  link(href="https://fonts.googleapis.com/css?family=Karma:300,600&display=swap" rel="stylesheet")
+  .typeset.heading-contrast.mb-0
+    .w-768.mx-auto.rwd.post
+
+      :md
+
+        [*Hacks/Hackers Taipei](http://hackshackers.taipei/)是全球非營利新聞社群[Hacks/Hackers](https://hackshackers.com/)的台北分支，透過不定期的工作坊、黑客松、案例分享會，鼓勵記者編輯（”hacks”）和程式設計師、設計師（”hackers”）相互學習、合作，一起想像新聞的未來。（過往的小聚資訊，歡迎上[臉書社團](https://www.facebook.com/groups/hackshackerstaipei)參考）*
+
+        *Hacks/Hackers Taipei陸續推出「本週H/H Taipei在關心什麼？」閱讀清單，定期整理「新聞 x 科技」的相關話題。如果沒有新鮮事，或我們沒有精力和時間，也會偶爾停止。往期內容，可以參考[這個連結](https://github.com/hackshackerstaipei/newsletter)。*
+
+        *最新[Hacks/Hackers Taipei＠medium](https://medium.com/hackshackerstaipei/)，則專門匯集台灣與全球在「科技x新聞」的現場觀察和思考。如果你有興趣投稿，歡迎來信：hackshackerstaipei@gmail.com*
+    .w-100.bg-light.py-4.mt-4: .py-4
+      .w-1024.mx-auto.rwd
+        .d-flex.my-4
+          h4.m-0.flex-grow-1 更多文章
+          h4.m-0: a(href="/post/") 文章列表 &#xbb;
+        .row
+          each i in [1,2,3]
+            .col-md-4.mb-4.pb-4: a.text-dark.text-no-deco(href="/post/jealous-list-2019/")
+              .aspect-ratio.ratio-16by9.bg-dark.mb-2
+              h3.mt-0.mb-2 GEN峰會見聞錄之一：關於資料新聞的未來
+              //-p.text-muted.mb-2 我們常在台灣討論資料新聞的內容、團隊編制、流程等面向，但這次峰會提供更宏觀的視野和想像：生態系統的建立。
+              .py-1.d-flex.align-items-center
+                .mr-2(style="width:2.5em"): .aspect-ratio.ratio-1by1.rounded-circle.bg-dark
+                .text-muted.text-sm
+                  div Haohsiang Ko
+                  div Jul 5, 2019
+

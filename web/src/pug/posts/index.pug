@@ -3,19 +3,23 @@ block vars
   - ctrl.navtop.placeholder = false;
 block head
 block body
+  include /data/posts.pug
+  - posts = posts.sort(function(a,b) { return ( b > a ? 1 : ( b < a ? -1 : 0)); })
   .typeset.heading-contrast.h-gr.mb-4
-    .bg-dark.text-white.w-100.h-100.mb-4: .vertical-center: .w-100: .w-1024.rwd.mx-auto.pt-4: a.text-white.text-no-deco(href="/post/jealous-list-2019/")
+    - var post = posts[0].data
+
+    .bg-dark.text-white.w-100.h-100.mb-4: .vertical-center: .w-100: .w-1024.rwd.mx-auto.pt-4: a.text-white.text-no-deco(href=`/post/${posts[0].name.replace('posts_','')}/`)
       .d-flex.mb-4
         div(style="flex:2 0 67%;padding-right:15px;")
           .aspect-ratio.ratio-2by1.bg-secondary
         div(style="flex:1 0 33%;padding-left:15px"): .vertical-center: .w-100
-          h3.mt-0.mb-2 GEN峰會見聞錄之一：關於資料新聞的未來
-          p.text-light.mb-2 我們常在台灣討論資料新聞的內容、團隊編制、流程等面向，但這次峰會提供更宏觀的視野和想像：生態系統的建立。
+          h3.mt-0.mb-2 #{post.title}
+          p.text-light.mb-2 #{post.brief}
           .py-1.d-flex.align-items-center
             .mr-2(style="width:2.5em"): .aspect-ratio.ratio-1by1.rounded-circle.bg-secondary
             .text-light.text-sm
-              div Haohsiang Ko
-              div Jul 5, 2019
+              div #{post.author}
+              div #{post.date}
 
   .typeset.heading-contrast
     .w-1024.rwd.mx-auto.pb-4
@@ -27,15 +31,16 @@ block body
             .input-group-append
               .btn.btn-outline-secondary 搜尋
       .row
-        each i in [1,2,3,4,5,6]
-          .col-md-4.mb-4.pb-4: a.text-dark.text-no-deco(href="/post/jealous-list-2019/")
+        each post in posts
+          - data = post.data
+          .col-md-4.mb-4.pb-4: a.text-dark.text-no-deco(href=`/posts/${post.name.replace('posts_','')}`)
             .aspect-ratio.ratio-16by9.bg-dark.mb-2
-            h3.mt-0.mb-2 GEN峰會見聞錄之一：關於資料新聞的未來
-            p.text-muted.mb-2 我們常在台灣討論資料新聞的內容、團隊編制、流程等面向，但這次峰會提供更宏觀的視野和想像：生態系統的建立。
+            h3.mt-0.mb-2 #{data.title}
+            p.text-muted.mb-2 #{data.brief}
             .py-1.d-flex.align-items-center
               .mr-2(style="width:2.5em"): .aspect-ratio.ratio-1by1.rounded-circle.bg-dark
               .text-muted.text-sm
-                div Haohsiang Ko
-                div Jul 5, 2019
+                div #{data.author}
+                div #{data.date}
 
 block script

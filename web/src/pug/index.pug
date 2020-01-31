@@ -3,6 +3,7 @@ block vars
  - ctrl.navtop.placeholder = false
 block head
 block body
+  include /data/event.pug
   .w-100.h-100.text-white.position-relative(style="background:url(/assets/img/hero-bg.jpg) center center fixed #222;background-size:cover")
     .vertical-center: .w-100.text-center
       img.mb-4(src="/assets/img/icon.svg",style="width:3em;opacity:.1;margin-top:-3em")
@@ -36,13 +37,13 @@ block body
           div(style="flex:2 0 50%;padding-right:15px;")
             .aspect-ratio.ratio-3by2.bg-secondary
           div(style="flex:1 0 50%;padding-left:15px"): .vertical-center: .w-100
-            .text-muted 第 16 場小聚
-            h2.mt-0.mb-2 Google 地圖工具工作坊
-            .text-muted.mb-2 2020/01/50 13:40 @ 松山菸廠
-            p.mb-2.text-light 10月6日（日）Hacks/Hackers Taipei第16次小聚，將邀請專家手把手教你操作Google地圖工具（2D到3D衛星圖），同時還有社群之友分享TechCamp的學習心得。
+            .text-muted 第 #{event.no} 場小聚
+            h2.mt-0.mb-2 #{event.title}
+            .text-muted.mb-2 #{event.date} @ #{event.place}
+            p.mb-2.text-light !{md(event.brief)}
             .d-flex.my-4
-              each i in [1,2,3]
-                .mr-2(style="width:2.5em"): .aspect-ratio.ratio-1by1.rounded-circle.bg-secondary
+              each speaker in event.speaker
+                .mr-2(style="width:2.5em"): .aspect-ratio.ratio-1by1.rounded-circle.bg-secondary.shadow-sm.border-light.border(style=`background-image:url(/assets/img/avatar/${speaker.avatar}.jpg);background-size:cover`)
             .my-4: a.btn.btn-outline-light(href="/event/latest/") 了解更多 &#xbb;
 
     #post.bg-light.text-dark.w-100.h-100.mb-4: .vertical-center: .w-100: .w-1024.rwd.mx-auto.pt-4.my-4
