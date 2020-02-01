@@ -1,0 +1,21 @@
+extends /base.pug
+block body
+  include /data/events.pug
+  #past.w-1024.rwd.mx-auto: .py-4.my-4
+    h2.mb-4 過往小聚
+    .row
+      each evt in events
+        - data = evt.data
+        .col-md-6.mb-4
+          .card.w-100.shadow-sm.pb-4: .text-dark.text-no-deco
+            .aspect-ratio.ratio-2by1.bg-dark
+            .card-body
+              .text-muted 第 #{data.no} 場小聚
+              h4.card-title.mt-0.text-truncate #{data.title}
+              p.card-text #{data.description}
+              .text-muted.mb-2 講者陣容
+              .d-flex
+                each speaker in data.speaker || []
+                  .mx-2.text-center(style="width:3.5em")
+                    .aspect-ratio.ratio-1by1.rounded-circle.bg-secondary.bg-cover.bg-portrait.mb-1(style=`background-image:url(/assets/img/avatar/${speaker.avatar}.jpg)`)
+                    .text-sm.text-muted #{speaker.name}
