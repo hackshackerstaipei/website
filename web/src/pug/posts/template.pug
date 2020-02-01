@@ -1,9 +1,17 @@
 //- module
 extends /base.pug
 block body
+  include /data/posts.pug
   link(href="https://fonts.googleapis.com/css?family=Karma:300,600&display=swap" rel="stylesheet")
   .typeset.heading-contrast.mb-0
     .w-768.mx-auto.rwd.post
+      h1 #{data.title}
+      .d-flex.align-items-center.my-4
+        .mr-2(style="width:2em"): .aspect-ratio.ratio-1by1.rounded-circle.bg-secondary.bg-portrait.bg-cover(style=`background-image:url(/assets/img/avatar/${data.avatar}.jpg)`)
+        .text-sm(style="line-height:1.25em")
+          .text-muted #{data.author}
+          .text-muted #{data.date}
+      | !{md(data.content)}
 
       :md
 
@@ -16,16 +24,17 @@ block body
       .w-1024.mx-auto.rwd
         .d-flex.my-4
           h4.m-0.flex-grow-1 更多文章
-          h4.m-0: a(href="/post/") 文章列表 &#xbb;
+          h4.m-0: a(href="/posts/") 文章列表 &#xbb;
         .row
-          each i in [1,2,3]
-            .col-md-4.mb-4.pb-4: a.text-dark.text-no-deco(href="/post/jealous-list-2019/")
-              .aspect-ratio.ratio-16by9.bg-dark.mb-2
-              h3.mt-0.mb-2 GEN峰會見聞錄之一：關於資料新聞的未來
-              //-p.text-muted.mb-2 我們常在台灣討論資料新聞的內容、團隊編制、流程等面向，但這次峰會提供更宏觀的視野和想像：生態系統的建立。
-              .py-1.d-flex.align-items-center
-                .mr-2(style="width:2.5em"): .aspect-ratio.ratio-1by1.rounded-circle.bg-dark
-                .text-muted.text-sm
-                  div Haohsiang Ko
-                  div Jul 5, 2019
+          each i in [0,1,2]
+            if posts[i]
+              - data = posts[i].data
+              .col-md-4.mb-4.pb-4: a.text-dark.text-no-deco(href="/posts/jealous-list-2019/")
+                .aspect-ratio.ratio-16by9.bg-dark.mb-2.bg-cover.bg-portrait(style=`background-image:url(${data.thumb})`)
+                h4.mt-0.mb-2.text-truncate #{data.title}
+                .py-1.d-flex.align-items-center
+                  .mr-2(style="width:2.5em"): .aspect-ratio.ratio-1by1.rounded-circle.bg-dark.bg-cover.bg-portrait(style=`background-image:url(/assets/img/avatar/${data.avatar}.jpg)`)
+                  .text-muted.text-sm
+                    div #{data.author}
+                    div #{data.date}
 

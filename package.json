@@ -18,9 +18,10 @@
   },
   "devDependencies": {
     "LiveScript": ">=1.2.0",
+    "progress": "^2.0.3",
     "stylus": "^0.54.5",
+    "template": "github:zbryikt/template#v2",
     "uglify-js": "=3.2.0",
-    "uglifycss": "0.0.29",
-    "template": "github:zbryikt/template#v2"
+    "uglifycss": "0.0.29"
   }
 }

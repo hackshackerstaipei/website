@@ -50,6 +50,9 @@ h6 {
 .post h1 {
   padding-top: 1em;
 }
+.post img {
+  max-width: 100%;
+}
 .post img,
 .post img + em {
   display: block;
