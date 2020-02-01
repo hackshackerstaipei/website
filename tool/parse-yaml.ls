@@ -43,7 +43,7 @@ scandir = (root, base) ->
     -
       var #{d.vname} = #{JSON.stringify(ret)};
     """
-    return {name: d.vname, data: ret}
+    return {name: d.fname, data: ret}
 
 
 scandir '../data'

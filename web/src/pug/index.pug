@@ -3,7 +3,10 @@ block vars
  - ctrl.navtop.placeholder = false
 block head
 block body
+  include /data/posts.pug
   include /data/event.pug
+  - posts = posts.sort(function(a,b) { return ( b > a ? 1 : ( b < a ? -1 : 0)); })
+  - var post = posts[0]
   .w-100.h-100.text-white.position-relative(style="background:url(/assets/img/hero-bg.jpg) center center fixed #222;background-size:cover")
     .vertical-center: .w-100.text-center
       img.mb-4(src="/assets/img/icon.svg",style="width:3em;opacity:.1;margin-top:-3em")
@@ -52,16 +55,16 @@ block body
         h1.my-0 最新文章
       .d-flex.my-4.pb-4
         div(style="flex:1 0 50%;padding-right:15px"): .vertical-center: .w-100
-          h2.mt-0.mb-2 GEN峰會見聞錄之一：關於資料新聞的未來
-          p.text-dark.mb-2 我們常在台灣討論資料新聞的內容、團隊編制、流程等面向，但這次峰會提供更宏觀的視野和想像：生態系統的建立。
-          .text-right: a(href="/post/jealous-list-2019/") ... 閱讀全文 &#xbb;
+          h2.mt-0.mb-2 #{post.data.title}
+          p.text-dark.mb-2 #{post.data.brief}
+          .text-right: a(href=`/posts/${post.name}/`) ... 閱讀全文 &#xbb;
           .py-1.d-flex.align-items-center
-            .mr-2(style="width:2.5em"): .aspect-ratio.ratio-1by1.rounded-circle.bg-secondary
+            .mr-2(style="width:2.5em"): .aspect-ratio.ratio-1by1.rounded-circle.bg-secondary.bg-cover.bg-portrait(style=`background-image:url(/assets/img/avatar/${post.data.avatar}.jpg)`)
             .text-dark.text-sm
-              div Haohsiang Ko
-              div Jul 5, 2019
+              div #{post.data.author}
+              div #{post.data.date}
         div(style="flex:2 0 50%;padding-left:15px;")
-          .aspect-ratio.ratio-3by2.bg-secondary
+          .aspect-ratio.ratio-3by2.bg-secondary.bg-cover.bg-portrait(style=`background-image:url(${post.data.thumb})`)
 
     .w-1024.rwd.mx-auto.py-4.text-center.mb-4: .py-4
       h2.mb-2 線上參與
