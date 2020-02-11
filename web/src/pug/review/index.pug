@@ -1,0 +1,71 @@
+extends /base.pug
+block body
+  .w-1024.rwd.mx-auto.typeset.heading-contrast
+    .card.shadow-sm: .card-body
+
+      .row
+        .col-md-4: .vertical-center
+          .w-100: .aspect-ratio.ratio-4by3.bg-dark.bg-portrait.bg-cover.rounded.shadow-sm(style="background-image:url(https://storage.googleapis.com/www-cw-com-tw/article/202002/article-5e42213e3109d.jpg)")
+        .col-md-8: .vertical-center: .w-100
+          h2.text-truncate 吹哨者之死　武漢肺炎犧牲下的醫師，李文亮為中國帶來什麼改變？
+          p 2月6日晚間起，中國社群網站上發出怒吼，為李文亮的離世感到不值。「我們需要言論自由」的短評獲得百萬次以上的迴響。究竟，李文亮是誰？讓中國想起的言論自由的重要性？
+          .mb-3
+            each n in ["武漢肺炎","冠狀病毒","李文亮"]
+              .btn.btn-sm.btn-outline-secondary.mr-2 #{n}
+          .py-1.d-flex.align-items-center
+            .mr-4
+              .text-sm.text-muted 所屬媒體
+              div(style="width:5em"): .aspect-ratio.ratio-2by1.rounded.bg-secondary.bg-cover.bg-portrait.border.border-light.shadow-sm
+            .mr-4
+              .text-sm.text-muted 投稿者
+              .d-flex.align-items-center
+                .mr-2(style="width:2.5em"): .aspect-ratio.ratio-1by1.rounded.bg-secondary.bg-cover.bg-portrait.border.border-light.shadow-sm
+                .text-secondary.text-sm
+                  div Kirby Wu
+                  div 2020/02/20
+            each n in ["月例賞","年度賞","人氣 No. 3"]
+              .mr-2
+                .text-sm.text-muted &nbsp;
+                .btn.btn-secondary #{n}
+                //-div(style="width:5em"): .aspect-ratio.ratio-2by1.rounded.bg-secondary.bg-cover.bg-portrait.border.border-light.shadow-sm
+      hr
+      .text-center.text-muted 短評
+      hr
+      each i in [1,2,3]
+        .row.my-4
+          .col-md-2
+            .w-100.mb-2: .aspect-ratio.ratio-1by1.rounded.bg-secondary
+            .text-center
+              span Kirby Wu
+          .col-md-10
+            h3 完海令節續成車構四斷知
+            p 顧以如多據讀決著人到的了極界是的！
+            p 了陸相紅趣。黃無果難自，經雜產車發前我美一總成元百告方光實不定……社女的活格大爾是資感才急組指過高了開就至操學度讀對足院起子下：總外道史升；灣家簡到獨議面國減海理不算片界他又，的爸然化多做體之覺供也度節做河動管！毒聲學南目人把心人。真的知實地子裡！天中土生語很國當時今一市市話東長術我兩施，這元則面部。決高二兒吃性……等論色景。學想人，斷過然爸刻了星她內論確此校，臺給今治是轉痛、創雖得人子方量去也。
+            p 女音葉緊因上這不史器家種天、清輕分此標速得年數多上過呢都工，上事法夫個推利直教土唱由為看，愛師呢證作人局利媽確道，家可電裡或絕的石不。回張活急，亮她金落展日知我公國研不不供要公我生農苦性雙我數切，應早場接音算落向到程。發麼思為今子洲實……當拉對基，山們速為，那接政談細同業想。也足。
+            p 論防西處報快護十利少山接人為像了前為大出人國父細歷車一費落團已頭葉響身清行找活？一務白女究開在事身是。
+            br
+            .btn.btn-secondary.mr-2 月例賞
+            .btn.btn-secondary.mr-2 年度賞
+            .btn.btn-secondary 個人收藏
+            
+
+        hr
+
+      
+
+    +nbr(3)
+
+    .card.w-480.shadow-sm: .card-body
+      h2 專題投稿
+      hr
+      .form
+        .form-group
+          label 專題網址
+          input.form-control
+        .form-group.mb-4
+          label 發表日期 #[span.text-sm.text-muted / optional]
+          input.form-control(type="date")
+        .form-group
+          .btn.btn-primary 投稿
+          .text-muted.mt-4.text-sm * 專題相關資訊將由系統程式自動解析
+
