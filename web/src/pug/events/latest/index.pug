@@ -9,7 +9,9 @@ block body
         h2.mt-0.mb-4 #{event.title}
         .row
           .col-md-7
-            .w-100: .aspect-ratio.ratio-16by9.bg-dark.mb-4(style=`background-image:url(/assets/img/event/${event.no}.png);background-size:cover`)
+            .w-100: .aspect-ratio.ratio-2by1.mb-4.shadow-sm
+              include ../thumb.pug
+
             | !{md(event.description)}
 
             h3 活動流程
@@ -24,16 +26,18 @@ block body
               h3 活動時間
               p #{event.date}
               h3 活動地點
-              p #{event.location}
+              p !{md(event.location)}
               h3 報名規範
               p 希望您確定可以參與後，再報名索取票券，別讓沒搶到票的朋友難過。如果你已經報名，但卻在（1) 活動前48小時內臨時取消，或 (2) 當天未出席，將取消你報名下一次小聚的機會。謝謝你的支持，期待你活動當天的加入！
-              a.btn.btn-primary(href=event.registerlink) 現在就報名
+              a.btn.btn-primary(href=event.registerlink,target="_blank") 現在就報名
 
         h3 講者陣容
         .row.my-4.py-4
           each speaker in event.speaker
             .col-md-3
-              .w-75.mx-auto.mb-2: .aspect-ratio.ratio-1by1: .w-100.rounded-circle.bg-dark
+              - avatar = speaker.avatar || speaker.name.replace(/ /g,'-').toLowerCase();
+              .w-75.mx-auto.mb-2: .aspect-ratio.ratio-1by1: .w-100.rounded-circle.bg-dark.bg-portrait.bg-cover(style=`background-image:url(/assets/img/avatar/${avatar}.jpg)`)
               h4.text-center #{speaker.name}
               p.text-center #{speaker.title}
-              p.text-left !{md(speaker.brief)}
+              if speaker.brief
+                p.text-left !{md(speaker.brief)}

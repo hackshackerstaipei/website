@@ -6,13 +6,15 @@ block body
     .row
       each evt in events
         - data = evt.data
+        - event = data
         .col-md-6.mb-4
           .card.w-100.shadow-sm.pb-4: .text-dark.text-no-deco
             .aspect-ratio.ratio-2by1.bg-dark
+              include thumb.pug
             .card-body
               .text-muted 第 #{data.no} 場小聚
               h4.card-title.mt-0.text-truncate #{data.title}
-              p.card-text #{data.description}
+              p.card-text #{data.description.substring(0,85)} ...
               .text-muted.mb-2 講者陣容
               .d-flex
                 each speaker in data.speaker || []

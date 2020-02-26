@@ -1,0 +1,27 @@
+//- module
+svg.w-100.h-100(xmlns="http://www.w3.org/2000/svg",
+xmlns:xlink="http://www.w3.0rg/1999/xlink",viewBox="0 0 1080 540")
+  - var asize = 80
+  - var margin = 10
+  - var colors = ["#0db4ba","#007fde","ff8853","#d44032","#334d68","#1e1146"]
+  - var color = colors[event.no % colors.length]
+  defs
+    clipPath#cp
+      circle(cx=(asize/2),cy=(asize/2),r=(asize/2))
+  rect(opacity="0.75" fill=color width="365" height="540")
+  rect(x="365" fill=color width="715" height="540")
+  include thumb.svg
+  text(x="319",y="286",text-anchor="end",dy="36",fill="#fff",font-size="36") 第 #{event.no} 場小聚
+  text(x="319",y="346",text-anchor="end",dy="20",fill="#fff",font-size="20") #{event.date}
+  text(x="714",y="223",text-anchor="middle",font-size="48",fill="#fff",
+  style="font-weight:bold") #{event.title}
+  - ppl = 7
+  - offset = (ppl > event.speaker.length ? event.speaker.length : ppl ) / 2
+  g(transform=`translate(${714 - offset * (asize + margin) + margin},301)`)
+    each speaker,$index in event.speaker
+      - avatar = speaker.avatar || speaker.name.replace(/ /g,'-').toLowerCase();
+      - y = ((asize + margin) * Math.floor($index / ppl))
+      - x = ($index % ppl) * (asize + margin)
+      g(transform=`translate(${x},${y})`)
+        image(clip-path="url(#cp)",width=asize,height=asize,x=0,y=0,xlink:href=`/assets/img/avatar/${avatar}.jpg`)
+
