@@ -27,34 +27,38 @@ block body
             .aspect-ratio.ratio-16by9.rounded.shadow-sm(style="background:url(/assets/img/map.png) center center no-repeat;background-size:cover")
             //-img(src="/assets/img/hh.svg",style="max-width:320px")
         .py-4.my-4
-          a.btn.btn-outline-primary.px-4.mr-2(href="/about/") 了解更多 &#xbb;
-          .btn.btn-outline-primary.px-4.mr-2(data-scrollto="#upcoming") 最新活動 &#xbb;
-          a.btn.btn-outline-primary.px-4(href="/post/") 所有文章 &#xbb;
+          a.btn.btn-outline-primary.px-4.mr-2.mb-2(href="/about/") 了解更多 &#xbb;
+          .btn.btn-outline-primary.px-4.mr-2.mb-2(data-scrollto="#upcoming") 最新活動 &#xbb;
+          a.btn.btn-outline-primary.px-4.mb-2(href="/post/") 所有文章 &#xbb;
 
     #upcoming.bg-dark.py-4.text-light
-      .w-1024.mx-auto.my-4
+      .w-1024.mx-auto.my-4.rwd
         .pb-4
           .text-muted Upcoming Activities
           h1.my-0 最新活動
-        .d-flex.my-4.pb-4
-          div(style="flex:2 0 50%;padding-right:15px;")
-            .aspect-ratio.ratio-3by2.bg-secondary.bg-cover.bg-portrait(style="background-image:url(/assets/img/hhtpe-watermark.svg)"): .w-100.h-100
-          div(style="flex:1 0 50%;padding-left:15px"): .vertical-center: .w-100
+        .my-4.pb-4.row
+          .col-md-5.mb-4: .vertical-center: .w-100
+            .aspect-ratio.ratio-3by2.bg-secondary.bg-cover.bg-portrait.shadow.rounded(style="background-image:url(/assets/img/hhtpe-watermark.svg)"): .w-100.h-100
+              include /events/thumb.pug
+          .col-md-7.mb-4: .vertical-center: .w-100
             .text-muted 第 #{event.no} 場小聚
             h2.mt-0.mb-2 #{event.title}
             .text-muted.mb-2 #{event.date} @ #{event.place}
             p.mb-2.text-light !{md(event.brief)}
             .d-flex.my-4
               each speaker in event.speaker
-                .mr-2(style="width:2.5em"): .aspect-ratio.ratio-1by1.rounded-circle.bg-secondary.shadow-sm.border-light.border(style=`background-image:url(/assets/img/avatar/${speaker.avatar}.jpg);background-size:cover`)
-            .my-4: a.btn.btn-outline-light(href="/event/latest/") 了解更多 &#xbb;
+                - avatar = speaker.avatar || speaker.name.replace(/ /g,'-').toLowerCase();
+                .mr-2(style="width:2.5em"): .aspect-ratio.ratio-1by1.rounded-circle.bg-secondary.shadow-sm(style=`background-image:url(/assets/img/avatar/${avatar}.jpg);background-size:cover`)
+            .my-4: a.btn.btn-outline-light(href="/events/latest/") 了解更多 &#xbb;
 
     #post.bg-light.text-dark.w-100.h-100.mb-4: .vertical-center: .w-100: .w-1024.rwd.mx-auto.pt-4.my-4
       .pb-4.text-right
         .text-muted Latest Articles
         h1.my-0 最新文章
-      .d-flex.my-4.pb-4
-        div(style="flex:1 0 50%;padding-right:15px"): .vertical-center: .w-100
+      .my-4.pb-4.row
+        .col-md-5.d-block.d-md-none.mb-4: .vertical-center: .w-100
+          .aspect-ratio.ratio-3by2.bg-secondary.bg-cover.bg-portrait.shadow.rounded(style=`background-image:url(${post.data.thumb})`)
+        .col-md-7.mb-4: .vertical-center: .w-100
           h2.mt-0.mb-2 #{post.data.title}
           p.text-dark.mb-2 #{post.data.brief}
           .text-right: a(href=`/posts/${post.name}/`) ... 閱讀全文 &#xbb;
@@ -63,8 +67,8 @@ block body
             .text-dark.text-sm
               div #{post.data.author}
               div #{post.data.date}
-        div(style="flex:2 0 50%;padding-left:15px;")
-          .aspect-ratio.ratio-3by2.bg-secondary.bg-cover.bg-portrait(style=`background-image:url(${post.data.thumb})`)
+        .col-md-5.d-none.d-md-block.mb-4: .vertical-center: .w-100
+          .aspect-ratio.ratio-3by2.bg-secondary.bg-cover.bg-portrait.shadow.rounded(style=`background-image:url(${post.data.thumb})`)
 
     .w-1024.rwd.mx-auto.py-4.text-center.mb-4: .py-4
       h2.mb-2 線上參與
