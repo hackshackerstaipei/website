@@ -1,0 +1,95 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: xingothic-tc;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: notoserifcjktc;
+}
+.typeset h1,
+.typeset h2,
+.typeset h3,
+.typeset h4,
+.typeset h5,
+.typeset h6 {
+  font-weight: 700;
+  font-family: notoserifcjktc;
+}
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: xingothic-tc;
+}
+.typeset h4,
+.typeset h5,
+.typeset h6 {
+  font-weight: 700;
+  font-family: xingothic-tc;
+}
+@media (max-width: 768px) {
+  h1.display-4 {
+    font-size: 3rem;
+  }
+}
+.post {
+  font-size: 1.25em;
+  font-family: 'Karma', xingothic-tc, serif;
+  letter-spacing: 0.03em;
+}
+.post h1 {
+  padding-top: 1em;
+}
+.post img {
+  max-width: 100%;
+}
+.post img,
+.post img + em {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.post img {
+  margin-top: 1.5em;
+}
+.post img + em {
+  opacity: 0.75;
+  font-size: 0.875em;
+  padding-bottom: 1.5em;
+}
+.post a {
+  color: currentColor;
+  text-decoration: none;
+  background-image: linear-gradient(to right, rgba(0,0,0,0.84) 100%, rgba(0,0,0,0.84) 0);
+  background-repeat: repeat-x;
+  background-position: 0 calc(1em + 1px);
+  background-size: 1px 1px;
+}
+.post ul {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  padding-left: 1.5em;
+}
+.post li {
+  margin-bottom: 1em;
+}
+.post strong {
+  font-weight: 600;
+}
+.foot a {
+  color: #fff;
+}
+.typeset p {
+  color: currentColor;
+}
