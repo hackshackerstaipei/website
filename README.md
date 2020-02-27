@@ -30,7 +30,9 @@ Hacks/Hackers Taipei 官方網站.
    - name - 講者名稱
    - title - 講者頭銜
    - brief - 講者簡介
-   - avatar - 講者大頭照檔名(不包含路徑與副檔名). 檔案放置在 static/assets/img/avatar/ 目錄下, 以 jpg 格式儲存.
+   - avatar -
+     講者大頭照檔名(不包含路徑與副檔名). 檔案放置在 static/assets/img/avatar/ 目錄下, 以 jpg 格式儲存.
+     若省略的話, 預設按 name 來找檔案, 比方說若講者叫「王小明」，則會試圖載入 static/assets/img/avatar/王小明.jpg
 
 可參考 [第一次活動 - 地圖神器 QGIS 實戰](https://github.com/hackshackerstaipei/website/blob/master/data/events/1.yaml) 的 Yaml 檔來對照所需的欄位如何編輯.
 
