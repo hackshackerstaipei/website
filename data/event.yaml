@@ -1,18 +1,15 @@
 title: 我們這樣做 2020 大選 
 date: 2020/03/15(日) 13:20 ~ 17:00 
 place: Mutix Studio
-location: | [台灣台北市松山區八德路四段636-1號一樓](https://goo.gl/maps/q79yt63UQ1Tv1fAm7) / 感謝 [Mutix Studio](https://studio.mutix.co)
-提供場地  
+location: | [台灣台北市松山區八德路四段636-1號一樓](https://goo.gl/maps/q79yt63UQ1Tv1fAm7) / 感謝 [Mutix Studio](https://studio.mutix.co)提供場地  
 registerlink: https://www.accupass.com/event/2002260418405376009450 
-no:18 
-brief: | 3月15日（日）Hacks/Hackers Taipei第18次小聚，將邀請四家媒體回顧今年1月總統大選的相關作品，談談這次專題背後的製作祕辛。 
+no: 18
+brief: |
+ 3月15日（日）Hacks/Hackers Taipei第18次小聚，將邀請四家媒體回顧今年1月總統大選的相關作品，談談這次專題背後的製作祕辛。 
 description: |
-Hacks/Hackers Taiepi ( http://hackshackers.taipei/ )
-是全球非營利新聞社群Hacks/Hacker的台北分支，2016年9月由一群關心新聞x科技發展的朋友組成，透過不定期的工作坊、黑客松、案例分享會，鼓勵記者編輯（the
-“hacks”）和程式設計師（the “hackers”）相互學習、合作，一起想像新聞的未來。 
-
-  2020年3月15日（日）Hacks/Hackers
-  Taipei的第十八次小聚「2020大選特別聚會」，特別邀請四家媒體回顧今年1月總統大選的相關作品，談談這次專題背後的製作祕辛。
+ Hacks/Hackers Taiepi ( http://hackshackers.taipei/ )是全球非營利新聞社群Hacks/Hacker的台北分支，2016年9月由一群關心新聞x科技發展的朋友組成，透過不定期的工作坊、黑客松、案例分享會，鼓勵記者編輯（the “hacks”）和程式設計師（the “hackers”）相互學習、合作，一起想像新聞的未來。 
+ 
+ 2020年3月15日（日）Hacks/Hackers Taipei的第十八次小聚「2020大選特別聚會」，特別邀請四家媒體回顧今年1月總統大選的相關作品，談談這次專題背後的製作祕辛。
 
   **由於考量疫情發展，這次小聚座位有限。也請成功報名的朋友，在活動當天「全程配戴口罩」，身體若有任何不適，請務必留在家裡休息（不會影響您後續報名的資格）。**
 
@@ -22,9 +19,9 @@ Hacks/Hackers Taiepi ( http://hackshackers.taipei/ )
 
   #### 1. 怎麼開票？
 
-  * **關鍵即時開票網站開發（關鍵評論網/高德理 Daniel Kao）** 分享《2020
-大選專題》製作過程，包含開票頁面設計以及工程、圖表規劃和報導準備。在準備過程中，程式如何增加專題製作的效率？事件當天發生的意外要如何反應？ *
-**READr 選舉開票專題技術分享（READrREADr/熊凱文)**
+  * **關鍵即時開票網站開發（關鍵評論網/高德理 Daniel Kao)** 
+  分享《2020大選專題》製作過程，包含開票頁面設計以及工程、圖表規劃和報導準備。在準備過程中，程式如何增加專題製作的效率？事件當天發生的意外要如何反應？ 
+  * **READr選舉開票專題技術分享（READrREADr/熊凱文)**
 從技術的角度分享，如何透過即時更新與串接中選會資料，合作出兼顧使用者體驗與官方數據的開票網頁。
 
   #### 2. 如何跟自己直球對決？
@@ -34,26 +31,40 @@ Hacks/Hackers Taiepi ( http://hackshackers.taipei/ )
 * **2020總統大選專輯：沒有乾貨，只有心酸 (天下雜誌/亓瑋漢、李郁欣)**
 我們是如何改造2018年的開票地圖，還讓機器人取代人類記者，寫出8000多篇分析？這一路的白工很多，冤枉路也不少。總之，工程師有很多話想說。
 
-agenda: | * 13:20 ~ 13:30 / 報到 * 13:30 ~ 13:40 / 開場 * 第一階段：如何開票？ * 13:40 ~
-14:20 / 關鍵評論網：即時開票網站開發 * 12:20 ~ 15:00 / READr：開票專題技術 * 15:00 ~ 15:20 /
-中場休息與交流 * 第二階段：如何跟自己直球對決？ * 15:20 ~ 16:00 / 公視 * 16:00 ~ 16:40 / 天下雜誌 * 16:40
-~ 17:00 / 短講與會後交流 (
-[短講報名在此](https://docs.google.com/spreadsheets/d/1unTjsQvymtrBGFf3AT-6zNSk914eSLQBWPzLJw-E1KI/edit#gid=0)
-)
+agenda: | 
+* 13:20 ~ 13:30 / 報到 
+* 13:30 ~ 13:40 / 開場 
+* 第一階段：如何開票？ 
+ * 13:40 ~14:20 / 關鍵評論網：即時開票網站開發 
+ * 12:20 ~ 15:00 / READr：開票專題技術 
+ * 15:00 ~ 15:20 /中場休息與交流 
+* 第二階段：如何跟自己直球對決？ 
+ * 15:20 ~ 16:00 / 公視 
+ * 16:00 ~ 16:40 / 天下雜誌 
+ * 16:40~ 17:00 / 短講與會後交流 ([短講報名在此](https://docs.google.com/spreadsheets/d/1unTjsQvymtrBGFf3AT-6zNSk914eSLQBWPzLJw-E1KI/edit#gid=0))
 
   當天活動依舊鼓勵大家共同筆記，[共筆連結在此](https://docs.google.com/document/d/1iaReoIH20vjv2BhMwK46ueAznwiOS0pDU8N8GrMk50c/edit)，歡迎一起參與記錄。
 
-speaker: - name: 高德理 Daniel Kao title: 關鍵評論網 / 前端工程師 brief: 美籍華僑，畢業於美國UCSD 資訊工程學系，曾任紐約時報工程師。
-
-  - name: 熊凱文 title: READr / 前端工程師 brief: 喜歡視覺體驗，如利用圖表理解數據與議題。
-
-  - name: 曾芯敏 title: 公視 / 設計 brief: 希望能一直畫自己想畫的，然後大眾也想知道的作品。
-
-  - name: 吳亭霓 title: 公視 / 實習生 brief: P#新聞實驗室資料新聞實習生
-
-  - name: 卓冠齊 title: 公視 / 製作人 brief: 打字機，寫字工，生平無大志，信奉新聞之神。
-
-  - name: 亓瑋漢 title: 天下雜誌 / 工程師 brief: 雜學工程師一枚，正在努力學習目標管理，認為技術的價值在於應用，商業模式先行。近期看完的一本書是師父，重新培養閱讀習慣。
-
-  - name: 李郁欣 title: 天下雜誌 / 資深策展編輯 brief: 剛從紙本編輯跳槽做數位；愛用spreadsheet清資料、Python苦手中。
+speaker: 
+  - name: 高德理 Daniel Kao 
+  title: 關鍵評論網 / 前端工程師 
+  brief: 美籍華僑，畢業於美國UCSD 資訊工程學系，曾任紐約時報工程師。
+  - name: 熊凱文 
+  title: READr / 前端工程師 
+  brief: 喜歡視覺體驗，如利用圖表理解數據與議題。
+  - name: 曾芯敏 
+  title: 公視 / 設計 
+  brief: 希望能一直畫自己想畫的，然後大眾也想知道的作品。
+  - name: 吳亭霓 
+  title: 公視 / 實習生 
+  brief: P#新聞實驗室資料新聞實習生
+  - name: 卓冠齊 
+  title: 公視 / 製作人 
+  brief: 打字機，寫字工，生平無大志，信奉新聞之神。
+  - name: 亓瑋漢 
+  title: 天下雜誌 / 工程師 
+  brief: 雜學工程師一枚，正在努力學習目標管理，認為技術的價值在於應用，商業模式先行。近期看完的一本書是師父，重新培養閱讀習慣。
+  - name: 李郁欣 
+  title: 天下雜誌 / 資深策展編輯 
+  brief: 剛從紙本編輯跳槽做數位；愛用spreadsheet清資料、Python苦手中。
 
