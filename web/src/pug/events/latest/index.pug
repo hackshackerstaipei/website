@@ -1,7 +1,19 @@
 extends /base.pug
-block body
+block vars
   include /data/event.pug
-
+  -
+    var og = {
+      "url": "https://hackshackers.taipei/events/latest",
+      "title": event.title + " - Hacks/Hackers Taipei",
+      "description": event.description.substring(0, 32) + "...",
+      "thumbnail": "https://hackshackers.taipei/assets/img/events/latest.png",
+      "thumbtype": {
+        "type": "image/png",
+        "width": 1080,
+        "height": 540
+      }
+    };
+block body
   .typeset.heading-contrast
     .w-1024.rwd.mx-auto
       .py-4

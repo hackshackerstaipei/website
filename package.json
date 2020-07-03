@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "cd web; ../node_modules/.bin/lsc ../node_modules/template/server.ls",
-    "build": "cd tool; lsc parse-yaml; lsc build; cd ..; find web/src/pug -type f | grep '\\.pug' | xargs touch"
+    "build": "cd tool; lsc parse-yaml; lsc build; lsc thumb; cd ..; find web/src/pug -type f | grep '\\.pug' | xargs touch"
   },
   "devDependencies": {
     "LiveScript": ">=1.2.0",

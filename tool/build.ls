@@ -1,4 +1,4 @@
-require! <[fs fs-extra path template pug progress js-yaml]>
+require! <[fs fs-extra path template pug progress js-yaml sharp]>
 
 console.log "compile post template ... "
 fn = pug.compile(
@@ -24,5 +24,6 @@ files.map (file) ->
   ret = fn ({data} <<< template.pug.extapi)
   fs-extra.ensure-dir-sync "../web/static/posts/#name"
   fs.write-file-sync "../web/static/posts/#name/index.html", ret
+
 
 process.exit 0
