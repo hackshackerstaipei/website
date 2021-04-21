@@ -22,7 +22,7 @@ scandir = (root, base) ->
     fs.write-file-sync "#pugdir/#{d.fname}.pug", """
     //- module
     -
-      var #{d.vname} = #{JSON.stringify(list)};
+      var #{d.vname.replace(/-/g,'_')} = #{JSON.stringify(list)};
     """
     return null
   else
@@ -41,7 +41,7 @@ scandir = (root, base) ->
     fs.write-file-sync "#pugdir/#{d.fname}.pug", """
     //- module
     -
-      var #{d.vname} = #{JSON.stringify(ret)};
+      var #{d.vname.replace(/-/g,'_')} = #{JSON.stringify(ret)};
     """
     return {name: d.fname, data: ret}
 

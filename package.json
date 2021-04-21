@@ -10,19 +10,19 @@
     "url": "https://github.com/hackshackerstaipei/website"
   },
   "engines": {
-    "node": ">=0.12.6",
-    "npm": ">=1.2.2"
+    "node": ">=10.14.1",
+    "npm": ">=6.4.1"
   },
   "scripts": {
     "start": "npx server -r web -o true",
     "build": "cd tool; lsc parse-yaml; lsc build; lsc thumb; cd ..; find web/src/pug -type f | grep '\\.pug' | xargs touch"
   },
   "devDependencies": {
-    "livescript": "^=1.6.0",
+    "livescript": "^1.6.0",
     "progress": "^2.0.3",
     "sharp": "^0.27.2",
     "stylus": "^0.54.5",
-    "template": "github:zbryikt/template#v2.2.4",
+    "template": "github:zbryikt/template#v2.3.11",
     "uglify-js": "=3.2.0",
     "uglifycss": "0.0.29"
   }
