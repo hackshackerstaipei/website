@@ -16,7 +16,7 @@ description: |
   
   工作坊將會討論到：
   
-  * 如何用 Datasette 管理 csv和SQLite
+  * 如何用 Datasette 管理 csv 和 SQLite
   * SQL 基本語法
   * Datasette 如何搭配你已經再用的資料分析工具
   * 資料新聞團隊的資料分析流程
