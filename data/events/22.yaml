@@ -10,7 +10,7 @@ brief: |
 description: |
   Hacks/Hackers Taipei 將在5月30日（日）舉辦「Datasette 資料新聞工作坊小聚」，《天下雜誌》資深前端工程師高德理（Daniel Kao）將分享和教學開源工具"[Datasette](https://datasette.io)"。
   
-  "Datasette"是由前《衛報》工程師 Simon Willison 開發，Daniel 將帶大家一起討論資料新聞團隊可以如何使用這套工具、如何優化資料管理和分析。
+  "Datasette"是由前《衛報》工程師 Simon Willison 開發，Daniel 會帶大家一起討論資料新聞團隊可以如何使用這套工具、如何優化資料管理和分析。
   
   這場工作坊將採2～3人小組的分組討論模式。參加者需自備筆電，無相關資料新聞經驗也可參加。
   
@@ -18,7 +18,7 @@ description: |
   
   * 如何用 Datasette 管理 csv 和 SQLite
   * SQL 基本語法
-  * Datasette 如何搭配你已經再用的資料分析工具
+  * Datasette 如何搭配你既有的資料分析工具
   * 資料新聞團隊的資料分析流程
   
   除了工作坊，我們也對外開放閃電短講，如果您有興趣分享個人或團隊管理資料用的工具，或你在分析資料時碰到的困難，都歡迎上[Google 表單](https://docs.google.com/spreadsheets/d/1pvnnO9Ti3uD6bW7Y-oD9lL_nQggWYxZ6vlNL2oGwOlo/edit)登記。
