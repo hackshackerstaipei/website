@@ -1,4 +1,4 @@
-title: Datasette 資料新聞工作坊 
+title: 疫情數據的新聞幕後
 date: 2021/10/31(日) 13:30 ~ 16:30 
 place: 線上舉辦（待成功報名後，會透過報名email發送線上會議連結）
 location: |
@@ -28,7 +28,7 @@ speaker:
   - name: 楊時鈞
     title: 關鍵評論網 / 資料記者
     brief: 現為《關鍵評論網》資料記者、《DD Story Hub》編輯
-    avatar: Steven
+    avatar: dummy
   - name: 柯皓翔 
     title: 《報導者》資料記者
     brief: Hacks/Hackers Taipei organizer、《報導者》資料記者
@@ -41,7 +41,7 @@ speaker:
     title: 前《端》傳媒台灣組主編 
     brief: 前《端》傳媒台灣組主編
     avatar: 何欣潔 
-   - name: 郭瑾燁
+  - name: 郭瑾燁
     title: 《端》傳媒設計
     brief: 《端》傳媒設計
     avatar: 郭瑾燁

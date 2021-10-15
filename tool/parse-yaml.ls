@@ -12,7 +12,7 @@ scandir = (root, base) ->
     list = list.filter -> it
     d = do
       fname: path.basename(root)
-      vname: root.replace(base, '').replace(/^\//,'').replace(/\//g, '_')
+      vname: root.replace(base, '').replace(/^\//,'').replace(/\//g, '_') or 'data'
       base: path.dirname(root)
     assetdir = path.join("../web/static/assets/data", d.base)
     pugdir = path.join("../web/src/pug/data", d.base)
