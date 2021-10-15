@@ -25,7 +25,7 @@ agenda: |
   當天活動鼓勵大家共同筆記，[共筆連結在此](https://docs.google.com/document/d/12uYLKE84TxrLgLUR1pTyReEaPOFHHvSzSrVTaQDQ95I/edit#)，歡迎一起參與記錄。
 
 speaker: 
-  - name: 楊時鈞 Steven Yeo
+  - name: 楊時鈞
     title: 關鍵評論網 / 資料記者
     brief: 現為《關鍵評論網》資料記者、《DD Story Hub》編輯
     avatar: Steven
@@ -34,12 +34,12 @@ speaker:
     brief: Hacks/Hackers Taipei organizer、《報導者》資料記者
     avatar: 柯皓翔 
   - name: 史書華
-    title: 《天下雜誌》主編、Hacks/Hackers Taipei co-founder
+    title: 《天下雜誌》主編
     brief: Hacks/Hackers Taipei共同創辦人，現為天下雜誌主編，負責中國、資料新聞專題。
     avatar: Silva
   - name: 何欣潔 
-    title: 《端》傳媒前台灣組主編 
-    brief: 《端》傳媒前台灣組主編
+    title: 前《端》傳媒台灣組主編 
+    brief: 前《端》傳媒台灣組主編
     avatar: 何欣潔 
    - name: 郭瑾燁
     title: 《端》傳媒設計
