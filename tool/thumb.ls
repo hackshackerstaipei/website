@@ -2,7 +2,7 @@ require! <[fs fs-extra path sharp pug js-yaml]>
 
 console.log "generate latest thumbnail ... "
 filename = '../web/src/pug/events/thumb.pug'
-event = js-yaml.safe-load (fs.read-file-sync '../data/event.yaml')
+event = js-yaml.load (fs.read-file-sync '../data/event.yaml')
 svg = data = pug.render fs.read-file-sync(filename).toString!, {filename, event}
 
 idx = -1

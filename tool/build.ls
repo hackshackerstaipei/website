@@ -22,7 +22,7 @@ bar = new progress(
 files.map (file) ->
   bar.tick!
   name = path.basename(file).replace(/\.yaml$/, '')
-  data = js-yaml.safe-load fs.read-file-sync(file)
+  data = js-yaml.load fs.read-file-sync(file)
   ret = fn ({data} <<< extapi)
   fs-extra.ensure-dir-sync "../web/static/posts/#name"
   fs.write-file-sync "../web/static/posts/#name/index.html", ret

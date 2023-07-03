@@ -32,7 +32,7 @@ scandir = (root, base) ->
       vname: root.replace(base, '').replace(/^\//,'').replace(/\//g, '_').replace(/\.yaml$/, '')
       base: path.dirname(root)
 
-    ret = js-yaml.safe-load fs.read-file-sync(root)
+    ret = js-yaml.load fs.read-file-sync(root)
     assetdir = path.join("../web/static/assets/data", d.base)
     pugdir = path.join("../web/src/pug/data", d.base)
     fs-extra.ensure-dir-sync assetdir

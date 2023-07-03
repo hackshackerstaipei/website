@@ -20,9 +20,9 @@
   "devDependencies": {
     "livescript": "^1.6.0",
     "progress": "^2.0.3",
-    "sharp": "^0.27.2",
-    "stylus": "^0.54.5",
-    "template": "github:zbryikt/template#v2.3.11",
+    "sharp": "^0.31.3",
+    "stylus": "^0.55.0",
+    "@zbryikt/template": "2.3.45",
     "uglify-js": "=3.2.0",
     "uglifycss": "0.0.29"
   }
